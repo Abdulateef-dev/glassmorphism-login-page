@@ -1,0 +1,196 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: url(img/iportfolio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientBG{
+    0% { background-position: 0% 50%; }
+    50%{ background-position: 100% 50%}
+    100%{ background-position: 0% 50%;}
+}
+@font-face{
+    src: url(fonts/Poppins-Regular.ttf);
+    font-family: Poppins;
+}
+
+.glasscontainer{
+    position:relative;
+    width:380px;
+    padding:40px;
+    border-radius: 20px;
+    backdrop-filter: blur();
+    background: rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 25px 45px rgba(255,255,255,0.4);
+    z-index: 10;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.glasscontainer::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,0.05);
+    transform: skewY(-15deg);
+    transition:0.5s;
+    pointer-events:none;
+    
+
+}
+
+.glasscontainer:hover::before{
+    left:120%;
+}
+
+.glasscontainer h2{
+    color: #ffffff;
+    font-size:20px;
+    font-weight:600;
+    text-align:center;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.inputgroup{
+    position:relative;
+    margin-bottom:30px;
+}
+
+.inputgroup input{
+    width:100%;
+    padding:15px 20px;
+    background: rgba(255,255,255,0.2);
+    border:none;
+    outline:none;
+    border-radius: 35px;
+    font-size: 16px;
+    color: #ffffff;
+    box-shadow: 0 5px 13px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.inputgrop input::placeholder{
+    color: rgba(255,255,255,0.7)
+}
+
+.inputgroup input:focus{
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.inputgroup label{
+    position:absolute;
+    top:50%;
+    left:20px;
+    transform:translateY(-50px);
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    font-weight: 600;
+    pointer-events: none;
+    transition: all 0.3 ease;
+
+}
+
+/* .inputgroup input:focus + label,
+.inputgroup input:valid + label{
+    top:0;
+    left:15;
+    font-size: 12px;
+    background: rgba(255,255,255,0.2);
+    padding:2px 8px;
+    border-radius:10px;
+    color: #ffffff;
+} */
+
+.remeberforget{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+}
+
+.remeberforget label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+ }
+
+
+ .remeberforget input{
+    margin-right: 8px;
+    accent-color:#ffffff;
+}
+
+.remeberforget a{
+    color:#ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.remeberforget a:hover{
+    text-decoration: underline;
+}
+
+.loginBtn{
+    width:100%;
+    padding:15px;
+    background: rgba(255,255,255,0.3);
+    border:none;
+    outline:none;
+    border-radius: 35px;
+    color:#ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor:pointer;
+    transition: all 0.3 ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.loginBtn:hover{
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}
+
+.registerlink{
+    text-align: center;
+    margin-top: 25px;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+.registerlink a {
+    color:#ffffff;
+    font-weight: 600;
+    text-decoration:none;
+    transition: all 0.3 ease;
+}
+
+.registerlink a:hover{
+    text-decoration: underline;
+}
