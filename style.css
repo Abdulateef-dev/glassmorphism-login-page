@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items:center;
-    background: url(Glass Morphism Login Page/img/iportfolio.jpg);
+    background: url(img/iportfolio.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -195,3 +195,4 @@ body{
     text-decoration: underline;
 
 }
+
